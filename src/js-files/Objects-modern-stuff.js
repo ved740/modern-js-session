@@ -19,3 +19,12 @@ const harry = {
     [propKey.toLowerCase()]: 42
 };
 console.log(harry.age);
+
+//JSON doen't identify undefined value
+var jsObj = {
+    name: 'Ved',
+    age: undefined
+};
+console.log(JSON.stringify(jsObj));
+
+//To Do - Getter and Setter

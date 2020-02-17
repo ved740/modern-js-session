@@ -1,6 +1,3 @@
-const propKey = 'AGE';
-const harry = {
-    name: 'Harry Smith',
-    [propKey.toLowerCase()]: 42
-};
-console.log(harry.age);
+var str = 'Hello';
+var iterator = str[Symbol.iterator]();
+console.log(iterator.next());
