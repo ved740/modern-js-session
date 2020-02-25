@@ -1,8 +1,13 @@
 //if the value is ommitted, variable with same name is looked for
-const age = 42;
+const firstName = 'Harry';
+const lastName = 'Smith';
+const age = 24;
+const city = 'BBSR';
 const harry = {
-    name: 'Harry Smith',
-    age //same as age: age
+    firstName: firstName,
+    lastName: lastName,
+    age: age,
+    city: city 
 };
 
 //use string literals, when property name is not an identifier
@@ -22,9 +27,28 @@ console.log(harry.age);
 
 //JSON doen't identify undefined value
 var jsObj = {
-    name: 'Ved',
+    name: 'Harry',
     age: undefined
 };
 console.log(JSON.stringify(jsObj));
 
 //TODO - Getter and Setter
+const firstName = 'Harry';
+const lastName = 'Smith';
+const age = 24;
+const city = 'BBSR';
+const harry = {
+    firstName,
+    lastName,
+    age,
+    city,
+    get getAge() {
+        return this.age;
+    },
+    set setAge(age) {
+        this.age = age;
+    }
+};
+
+//harry.getAge = 30;
+//harry.setAge = 42
