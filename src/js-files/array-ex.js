@@ -9,7 +9,7 @@ console.log(someNumbers[0]);
 
 //A common error
 var arr = [1, 2, 3];
-var getKeyAtIndexOne = Object.keys(arr).find((index) => {
+var checkKeyAtIndexOne = Object.keys(arr).find((index) => {
     return index === 1; //should be '' + 1
 });
-console.log(arr[getKeyAtIndexOne]);
+console.log(arr[checkKeyAtIndexOne]);

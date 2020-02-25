@@ -14,9 +14,9 @@ var str = 'Hello';
 var iterator = str[Symbol.iterator]();
 console.log(iterator.next()); //logs { value: 'H', done: false }
 
-//get iterator
+/* //get iterator
 var arr = [1, 2, 3];
 var arrIterator = arr[Symbol.iterator]();
 while (arrIterator.next()) {
     if ()
-}
+} */
