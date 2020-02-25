@@ -27,4 +27,4 @@ var jsObj = {
 };
 console.log(JSON.stringify(jsObj));
 
-//To Do - Getter and Setter
+//TODO - Getter and Setter

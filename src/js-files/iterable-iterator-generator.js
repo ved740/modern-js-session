@@ -1,8 +1,9 @@
 //Check if iterable
 var arr = [1, 2, 3];
 console.log(arr[Symbol.iterator]);
-
+//A function
 console.log(1[Symbol.iterator]);
+//undefined
 
 //String is iterable
 var str = 'Hello';

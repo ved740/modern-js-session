@@ -35,25 +35,21 @@ function createPosts(post) {
   });
 }
 
-createPosts({
-  title: "Post Three",
-  body: "This is post Three"
-})
-  .then(getPosts)
-  .catch(err => console.log(err));
+async function init() {
+  await createPosts({
+    title: "Post Three",
+    body: "This is post Three"
+  });
 
-// Promise.all
-const promise1 = Promise.resolve("Hello Wrold");
-const promise2 = 10;
-const promise3 = new Promise((rs, rj) => {
-  setTimeout(rs, 2000, "Good Bye");
-});
-const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(res =>
-  res.json()
-);
+  getPosts();
+}
 
-Promise.all([promise1, promise2, promise3, promise4])
-  .then(result => {
-    console.log(result);
-  })
-  .catch(err => console.log(err));
+init();
+
+//With Fetch
+/* async function fetchUsers() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+  console.log(data);
+}
+fetchUsers(); */

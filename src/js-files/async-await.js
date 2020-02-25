@@ -34,26 +34,8 @@ function createPosts(post) {
     }, 2000);
   });
 }
+1;
 
-createPosts({
-  title: "Post Three",
-  body: "This is post Three"
-})
-  .then(getPosts)
-  .catch(err => console.log(err));
+//Problem 1: Create a function init and display posts using first createPosts and then getPosts;
 
-// Promise.all
-const promise1 = Promise.resolve("Hello Wrold");
-const promise2 = 10;
-const promise3 = new Promise((rs, rj) => {
-  setTimeout(rs, 2000, "Good Bye");
-});
-const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(res =>
-  res.json()
-);
-
-Promise.all([promise1, promise2, promise3, promise4])
-  .then(result => {
-    console.log(result);
-  })
-  .catch(err => console.log(err));
+//Problem 2: Use open api GET "https://jsonplaceholder.typicode.com/users" and consume it using async / await
